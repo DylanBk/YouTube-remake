@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>React App</title>
+        <link rel="stylesheet" href="style.css">
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> <!-- REACT -->
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> <!-- REACT DOM -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- JSX -->
+        <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                          "almost-black": "#282828",
+                          "border-color": "#303030",
+                          "yt-red": "#FF0000"
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body class="light:bg-white dark:bg-almost-black">
+        <div id="root"></div>
+
+        <script src="./src/index.js"></script>
+        <script src="http://localhost:3000"></script> <!-- enables React dev tools -->
+    </body>
+
+</html>
