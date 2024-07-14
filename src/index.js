@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Import createRoot from react-dom/client
-import './style.css'; // Import your Tailwind CSS here
+import '../src/styles/style.css'; // Import your CSS here
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

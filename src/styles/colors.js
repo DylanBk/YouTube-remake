@@ -7,7 +7,7 @@ const colors = {
     "text-grey":  "#808080",
     "almost-white": "#EDEDED",
     "almost-white-dark": "#E4E4E4"
-}
+};
 
 // export default colors;
 module.exports = colors;

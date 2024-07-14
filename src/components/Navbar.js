@@ -18,14 +18,14 @@ const colors = require('../styles/colors')
 function Navbar() {
     return (
         <nav className='h-10 w-screen items-start light:bg-white dark:bg-almost-black'>
-            <ul className='w-[calc(100%-1rem)] absolute left-4 grid grid-cols-3 gap-10 flex flex-row items-center justify-around gap-10'>
+            <ul className='w-[calc(100%-1rem)] absolute left-4 grid grid-cols-3 gap-10 items-center justify-around'>
                 <div className='flex flex-row flex-auto gap-5 items-center justify-self-start'>
-                    <li><button className='h-12 w-auto flex'>
-                            <div className='relative w-12'>
-                                <picture className='h-12 w-12 absolute left-0 top-1.5'>
+                    <li><button className='h-12 w-32 border border-blue-400'>
+                            <div className='w-32 relative'>
+                                <picture className='h-full w-full absolute left-0 top-0.75'>
                                     <source srcSet={burgerMenuBlack} media='(prefers-color-scheme: light)'></source>
                                     <source srcSet={burgerMenuWhite} media='(prefers-color-scheme: dark)'></source>
-                                    <img src={burgerMenuBlack}></img>
+                                    <img src={burgerMenuBlack} alt='Burger Menu Icon'></img>
                                 </picture>
                             </div>
                         </button></li>
@@ -34,30 +34,30 @@ function Navbar() {
                                 <picture>
                                     <source srcSet={ytLogoFullBlack} media='(prefers-color-scheme: light)'></source>
                                     <source srcSet={ytLogoFullWhite} media='(prefers-color-scheme: dark)'></source>
-                                    <img src={ytLogoFullBlack}></img>
+                                    <img src={ytLogoFullBlack} alt='YouTube Logo full size'></img>
                                 </picture>
                             </div>
                         </a></li>
                 </div>
                 <div className='flex flex-row flex-auto gap-5 items-center'>
-                    <form className='flex nowrap'>
-                        <input className='w-96 p-2 border border-r-0 border-dark-grey rounded-l-full rounded-r-none m-0 outline-none focus:border-blue-500 dark:bg-almost-black-light' type='text' placeholder='Search'></input>
-                        <button className='flex items-center px-2 border border-dark-grey rounded-r-full rounded-l-none bg-almost-white dark:bg-almost-black-lighter'>
+                    <form id='search-bar-form' name='search-bar-form' className='flex nowrap' method='post'>
+                        <input id='search-bar-input' name='search-bar-input' className='w-96 p-2 border border-r-0 border-dark-grey rounded-l-full rounded-r-none m-0 outline-none focus:border-blue-500 dark:bg-almost-black-light' type='text' placeholder='Search'></input>
+                        <button id='search-bar-btn' name='search-bar-btn' className='flex items-center px-2 border border-dark-grey rounded-r-full rounded-l-none bg-almost-white dark:bg-almost-black-lighter' type='submit'>
                             <div className='w-7'>
                                 <picture>
                                     <source srcSet={searchBlack} media='(prefers-color-scheme: light)'></source>
                                     <source srcSet={searchWhite} media='(prefers-color-scheme: dark)'></source>
-                                    <img src={searchBlack}></img>
+                                    <img src={searchBlack} alt='Search Icon'></img>
                                 </picture>
                             </div>
                         </button>
                     </form>
-                    <li><button className='flex border border-dark-grey rounded-full bg-almost-white dark:bg-almost-black-lighter'>
+                    <li><button className='flex border border-dark-grey m-2 rounded-full bg-almost-white dark:bg-almost-black-lighter'>
                         <div className='w-10'>
                             <picture> 
                                 <source srcSet={micBlack} media='(prefers-color-scheme: light)'></source>
                                 <source srcSet={micWhite} media='(prefers-color-scheme: dark)'></source>
-                                <img src={micBlack}></img>
+                                <img src={micBlack} alt='Microphone Icon'></img>
                             </picture>
                         </div>
                     </button></li>
@@ -68,7 +68,7 @@ function Navbar() {
                                 <picture>
                                     <source srcSet={uploadBlack} media='(prefers-color-scheme: light)'></source>
                                     <source srcSet={uploadWhite} media='(prefers-color-scheme: dark)'></source>
-                                    <img src={uploadBlack}></img>
+                                    <img src={uploadBlack} alt='Upload File Icon'></img>
                                 </picture>
                             </div>
                         </button></li>
@@ -77,7 +77,7 @@ function Navbar() {
                                 <picture>
                                     <source srcSet={notiBellBlack} media='(prefers-color-scheme: light)'></source>
                                     <source srcSet={notiBellWhite} media='(prefers-color-scheme: dark)'></source>
-                                    <img src={notiBellBlack}></img>
+                                    <img src={notiBellBlack} alt='Notification Bell Icon'></img>
                                 </picture>
                             </div>
                         </button></li>
@@ -86,7 +86,7 @@ function Navbar() {
                                 <picture>
                                     <source srcSet={profileBlack} media='(prefers-color-scheme: light)'></source>
                                     <source srcSet={profileWhite} media='(prefers-color-scheme: dark)'></source>
-                                    <img src={profileBlack}></img>
+                                    <img src={profileBlack} alt='Profile Icon'></img>
                                 </picture>
                             </div>
                         </button></li>

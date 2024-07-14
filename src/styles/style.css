@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex: 1;
+}
+
+.visible-overflow-important {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
+
+/* dont have to manually set text colours in each component */
+@media (prefers-color-scheme: light) {
+    *{
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+    color: white;
+    }
+}
